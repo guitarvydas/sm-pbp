@@ -24,13 +24,14 @@ def handler (eh,mev):
     uut = eh.instance_data
     try:
         if mev.port == "min":
-            uut.min = int (mev.datum.v)
-            print (f'min={uut.min}', file=sys.stderr)
+            uut.env.min = int (mev.datum.v)
+            print (f'min={uut.env.min}', file=sys.stderr)
         elif mev.port == "max":
-            uut.max = int (mev.datum.v)
-            print (f'max={uut.max}', file=sys.stderr)
+            uut.env.max = int (mev.datum.v)
+            print (f'max={uut.env.max}', file=sys.stderr)
         elif mev.port == "x":
             uut.env.x = int (mev.datum.v)
+            print (f'x={uut.env.x}', file=sys.stderr)
             uut.env.mev = mev
             uut.step ()
             zd.send (eh, "", f"x={uut.env.x} state={uut.state}", mev)
