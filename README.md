@@ -1,84 +1,17 @@
 # Overview
 
-![diagram](looptest.drawio.png)
 
-Convert a diagram to `.sm` format.
+1. Convert the DPL transmogrifier diagram `smdpl.drawio` to Python `smdpl.py`. ![smdpl DPL transmogrifier source code](smdpl.drawio.png)
+2. Use `smdpl.py` to convert the state machine diagram `looper.drawio` to `looper.py`. ![looper source code](looper.drawio.png)
+3. Include (import) `looper.py` in the test jig and run the ![test jig](testjig.drawio.png).
 
-```
-state "idle" {
-    {}
-    {
-        %next "wait for w recrossing" %when (x > w) {reverse ()}
-        %next "wait for zero recrossing" %when (x < 0) {reverse ()}
-        }
-    {}
-    }
-state "wait for w recrossing" {
-    {}
-    {
-        %next "idle" %when (x <= w)
-        }
-    {}
-    }
-state "wait for zero recrossing" {
-    {}
-    {
-        %next "idle" %when (x >= 0)
-        }
-    {}
-    }
-```
+The test jig is in `testjig.drawio`. It creates a "stimulus-response" test of `looper.py`. The stimulus driver `stimulus.py`, the envelope that contains the looper is `testenvelope.py`. The response is observed using a probe named `watch`. If everything works OK, then the responses are displayed on the console in real time, whereas if an implementation error occurs, the error message is contained in the output `out.✗`.
 
+To run the test jig, we use `testermain.py`. It installs the 2 parts - stimulus and testenvelope - and injects a kick-off mevent (empty string in this case) into the top level of the test jig.
 
-Then, convert the `.sm` file to some programming language, e.g. Python.
+Practically, step (1) needs to be performed only once. Once the transmogrifier (compiler) has been created, we don't need to keep re-creating it. I'm re-creating it every time, though, while bootstrapping. [Rebuilding it from scratch doesn't take long enough on modern hardware to justify a makefile-driven approach].
 
-```
-class SM_looptest:
-    
-    def enter_idle (self):
-        self.state = idle
-        
-    def step_idle (self):
-        if (x > w):
-            exit_idle ()
-            reverse ()
-            enter_wait_for_w_recrossing ()
-        if (x < 0):
-            exit_idle ()
-            reverse ()
-            enter_wait_for_zero_recrossing ()
-    def exit_idle (self):
-        pass
-    def enter_wait_for_w_recrossing (self):
-        self.state = wait_for_w_recrossing
-        
-    def step_wait_for_w_recrossing (self):
-        if (x <= w):
-            exit_wait_for_w_recrossing ()
-            enter_idle ()
-    def exit_wait_for_w_recrossing (self):
-        pass
-    def enter_wait_for_zero_recrossing (self):
-        self.state = wait_for_zero_recrossing
-        
-    def step_wait_for_zero_recrossing (self):
-        if (x >= 0):
-            exit_wait_for_zero_recrossing ()
-            enter_idle ()
-    def exit_wait_for_zero_recrossing (self):
-        pass
-    def __init__ (self):
-        self.enter_idle
-    def step (self):
-        {
-            "idle": self.step_idle,
-            "wait for w recrossing": self.step_wait_for_w_recrossing,
-            "wait for zero recrossing": self.step_wait_for_zero_recrossing,
-        } [self.state] ()
-        
-sm = SM_looptest ()
-```
-
+As it stands, `looper.py` is generated sa raw Python code meant to be copy/pasted or imported into another Python program. It is, at this point in time, not formatted for use in a PBP diagram. The job of `testenvelope.py` is to create the necessary scaffolding to use `looper.py` in a PBP diagram. [Future: the smdpl transmogrifier should emit ready-to-run-in-PBP Python code, but, this would involve some design considerations that I don't want to think about yet (e.g. how to declare on the sm diagram the inputs that trigger transitions (e.g "x"))]
 
 # usage
 `./@make`

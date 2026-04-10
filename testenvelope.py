@@ -1,7 +1,7 @@
 import sys
 import kernel0d as zd
 
-import looper
+import looper # see looper.drawio
 
 class Env:
     def __init__ (self):
