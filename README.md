@@ -1,6 +1,5 @@
 # Overview
 
-
 1. Convert the DPL transmogrifier diagram `smdpl.drawio` to Python `smdpl.py`. ![smdpl DPL transmogrifier source code](smdpl.drawio.png)
 2. Use `smdpl.py` to convert the state machine diagram `looper.drawio` to `looper.py`. ![looper source code](looper.drawio.png)
 3. Include (import) `looper.py` in the test jig and run the ![test jig](testjig.drawio.png).
@@ -11,11 +10,19 @@ To run the test jig, we use `testermain.py`. It installs the 2 parts - stimulus 
 
 Practically, step (1) needs to be performed only once. Once the transmogrifier (compiler) has been created, we don't need to keep re-creating it. I'm re-creating it every time, though, while bootstrapping. [Rebuilding it from scratch doesn't take long enough on modern hardware to justify a makefile-driven approach].
 
-As it stands, `looper.py` is generated sa raw Python code meant to be copy/pasted or imported into another Python program. It is, at this point in time, not formatted for use in a PBP diagram. The job of `testenvelope.py` is to create the necessary scaffolding to use `looper.py` in a PBP diagram. [Future: the smdpl transmogrifier should emit ready-to-run-in-PBP Python code, but, this would involve some design considerations that I don't want to think about yet (e.g. how to declare on the sm diagram the inputs that trigger transitions (e.g "x"))]
+As it stands, `looper.py` is generated sa raw Python code meant to be copy/pasted or imported into another Python program. It is, at this point in time, not formatted for use in a PBP diagram. The job of `testenvelope.py` is to create the necessary scaffolding to use `looper.py` in a PBP diagram. 
 
 # usage
 `./@make`
 
+(remember to run the installer once before running @make)
+
 # install
 `./INSTALL.bash`
+
+# Future
+- The smdpl transmogrifier should emit ready-to-run-in-PBP Python code, but, this would involve some design considerations that I don't want to think about yet, e.g. how to declare on the sm diagram the inputs that trigger transitions (e.g "x").
+
+- At this moment, I'm just testing the looper code (diagram). When I'm happy with the tests, I will probably just copy it over and incorporate it into the Pong project.
+
 
