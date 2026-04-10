@@ -24,9 +24,11 @@ def handler (eh,mev):
     uut = eh.instance_data
     try:
         if mev.port == "min":
-            pass
+            uut.min = int (mev.datum.v)
+            print (f'min={uut.min}', file=sys.stderr)
         elif mev.port == "max":
             uut.max = int (mev.datum.v)
+            print (f'max={uut.max}', file=sys.stderr)
         elif mev.port == "x":
             uut.env.x = int (mev.datum.v)
             uut.env.mev = mev
