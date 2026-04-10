@@ -22,7 +22,11 @@ class Env:
 def handler (eh,mev):
     uut = eh.instance_data
     try:
-        if mev.port == "x":
+        if mev.port == "min":
+            pass
+        elif mev.port == "max":
+            uut.w = int (mev.datum.v)
+        elif mev.port == "x":
             uut.env.x = int (mev.datum.v)
             uut.env.mev = mev
             uut.step ()

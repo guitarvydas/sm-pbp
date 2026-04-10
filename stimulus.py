@@ -5,17 +5,21 @@ class Coordinates:
     def __init__ (self):
         self.x = 0
         self.step = 25
-        self.max = 25
+        self.simulus_loop_max = 25
         self.count = 0
+        self.uutmin = 0
+        self.uutmax = 100
 
 def handler (eh,mev):
     coords = eh.instance_data
     try:
         if mev.port == "":
+            zd.send (eh, "min", coords.uutmin, mev)
+            zd.send (eh, "max", coords.uutmax, mev)
             zd.send (eh, "x", coords.x, mev)
         elif mev.port == "next":
             coords.count += 1
-            if coords.count <= coords.max:
+            if coords.count <= coords.simulus_loop_max:
                 coords.x += coords.step
                 zd.send (eh, "x", coords.x, mev)
         elif mev.port == "reverse":
