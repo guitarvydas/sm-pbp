@@ -1,0 +1,8 @@
+#!/bin/bash
+echo '*** automated test ***'
+#export PBPSTEPPING="1"
+${PBP}/das2json testjig.drawio
+python testermain.py "" test testjig.drawio.json
+
+# echo '*** manual test ***'
+# python manual-tester.py # old, manual version

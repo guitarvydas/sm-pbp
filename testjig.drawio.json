@@ -1,0 +1,135 @@
+[
+  {
+    "name": "test",
+    "children": [
+      {
+        "name": "Test Envelope",
+        "id": 4
+      },
+      {
+        "name": "Stimulus",
+        "id": 11
+      },
+      {
+        "name": ":?watch",
+        "id": 17
+      },
+      {
+        "name": "🚫",
+        "id": 19
+      }
+    ],
+    "connections": [
+      {
+        "dir": 0,
+        "source_port": "",
+        "target_port": "",
+        "target": {
+          "name": "Stimulus",
+          "id": 11
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": "Test Envelope",
+          "id": 4
+        },
+        "target": {
+          "name": ":?watch",
+          "id": 17
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "✗",
+        "target_port": "",
+        "source": {
+          "name": "Test Envelope",
+          "id": 4
+        },
+        "target": {
+          "name": "🚫",
+          "id": 19
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "✗",
+        "target_port": "",
+        "source": {
+          "name": "Stimulus",
+          "id": 11
+        },
+        "target": {
+          "name": "🚫",
+          "id": 19
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "x",
+        "target_port": "x",
+        "source": {
+          "name": "Stimulus",
+          "id": 11
+        },
+        "target": {
+          "name": "Test Envelope",
+          "id": 4
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "reverse",
+        "target_port": "reverse",
+        "source": {
+          "name": "Test Envelope",
+          "id": 4
+        },
+        "target": {
+          "name": "Stimulus",
+          "id": 11
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "next",
+        "target_port": "next",
+        "source": {
+          "name": "Test Envelope",
+          "id": 4
+        },
+        "target": {
+          "name": "Stimulus",
+          "id": 11
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "update",
+        "target_port": "",
+        "source": {
+          "name": "Test Envelope",
+          "id": 4
+        },
+        "target": {
+          "name": ":?watch",
+          "id": 17
+        }
+      },
+      {
+        "dir": 2,
+        "source_port": "",
+        "target_port": "✗",
+        "source": {
+          "name": "🚫",
+          "id": 19
+        }
+      }
+    ],
+    "file": "testjig.drawio"
+  }
+]
