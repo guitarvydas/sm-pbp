@@ -10,7 +10,7 @@ target="yK0KRwzggwMbkE22hVbx-20",},
 "transitionCode" : {
 id="yK0KRwzggwMbkE22hVbx-14",
 parent="yK0KRwzggwMbkE22hVbx-13",
-value="e.x > e.w{e.reverse ()}",},
+value="e.x > e.max{e.reverse ()}",},
 "transition" : {
 id="yK0KRwzggwMbkE22hVbx-15",
 parent="yK0KRwzggwMbkE22hVbx-1",
@@ -19,7 +19,7 @@ target="yK0KRwzggwMbkE22hVbx-23",},
 "transitionCode" : {
 id="yK0KRwzggwMbkE22hVbx-16",
 parent="yK0KRwzggwMbkE22hVbx-15",
-value="e.x < 0{e.reverse ()}",},
+value="e.x < e.min{e.reverse ()}",},
 "state" : {
 id="yK0KRwzggwMbkE22hVbx-17",
 parent="yK0KRwzggwMbkE22hVbx-1",
@@ -32,11 +32,11 @@ target="yK0KRwzggwMbkE22hVbx-17",},
 "transitionCode" : {
 id="yK0KRwzggwMbkE22hVbx-19",
 parent="yK0KRwzggwMbkE22hVbx-18",
-value="e.x < e.w",},
+value="e.x < e.max",},
 "state" : {
 id="yK0KRwzggwMbkE22hVbx-20",
 parent="yK0KRwzggwMbkE22hVbx-1",
-value="wait for w recrossing",},
+value="wait for max recrossing",},
 "transition" : {
 id="yK0KRwzggwMbkE22hVbx-21",
 parent="yK0KRwzggwMbkE22hVbx-1",
@@ -45,8 +45,8 @@ target="yK0KRwzggwMbkE22hVbx-17",},
 "transitionCode" : {
 id="yK0KRwzggwMbkE22hVbx-22",
 parent="yK0KRwzggwMbkE22hVbx-21",
-value="e.x > 0",},
+value="e.x > e.min",},
 "state" : {
 id="yK0KRwzggwMbkE22hVbx-23",
 parent="yK0KRwzggwMbkE22hVbx-1",
-value="wait for zero recrossing",},]}]
+value="wait for min recrossing",},]}]

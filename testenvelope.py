@@ -6,7 +6,8 @@ import looper
 class Env:
     def __init__ (self):
         self.x = 0
-        self.w = 100
+        self.min = 0
+        self.max = 100
         self.eh = None
         self.mev = None
         self.reverse = self.rev
@@ -25,7 +26,7 @@ def handler (eh,mev):
         if mev.port == "min":
             pass
         elif mev.port == "max":
-            uut.w = int (mev.datum.v)
+            uut.max = int (mev.datum.v)
         elif mev.port == "x":
             uut.env.x = int (mev.datum.v)
             uut.env.mev = mev

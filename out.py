@@ -7,41 +7,41 @@ class SM_✣:
         
     def step_idle (self):
         e = self.env
-        if (e.x > e.w):
+        if (e.x > e.max):
             self.exit_idle ()
             e.reverse ()
-            self.enter_wait_for_w_recrossing ()
-        if (e.x < 0):
+            self.enter_wait_for_max_recrossing ()
+        if (e.x < e.min):
             self.exit_idle ()
             e.reverse ()
-            self.enter_wait_for_zero_recrossing ()
+            self.enter_wait_for_min_recrossing ()
     def exit_idle (self):
         e = self.env
         pass
-    def enter_wait_for_w_recrossing (self):
+    def enter_wait_for_max_recrossing (self):
         e = self.env
-        self.state = "wait for w recrossing"
-        e.update (" >> entering 'wait for w recrossing'")
+        self.state = "wait for max recrossing"
+        e.update (" >> entering 'wait for max recrossing'")
         
-    def step_wait_for_w_recrossing (self):
+    def step_wait_for_max_recrossing (self):
         e = self.env
-        if (e.x < e.w):
-            self.exit_wait_for_w_recrossing ()
+        if (e.x < e.max):
+            self.exit_wait_for_max_recrossing ()
             self.enter_idle ()
-    def exit_wait_for_w_recrossing (self):
+    def exit_wait_for_max_recrossing (self):
         e = self.env
         pass
-    def enter_wait_for_zero_recrossing (self):
+    def enter_wait_for_min_recrossing (self):
         e = self.env
-        self.state = "wait for zero recrossing"
-        e.update (" >> entering 'wait for zero recrossing'")
+        self.state = "wait for min recrossing"
+        e.update (" >> entering 'wait for min recrossing'")
         
-    def step_wait_for_zero_recrossing (self):
+    def step_wait_for_min_recrossing (self):
         e = self.env
-        if (e.x > 0):
-            self.exit_wait_for_zero_recrossing ()
+        if (e.x > e.min):
+            self.exit_wait_for_min_recrossing ()
             self.enter_idle ()
-    def exit_wait_for_zero_recrossing (self):
+    def exit_wait_for_min_recrossing (self):
         e = self.env
         pass
     def __init__ (self, env):
@@ -51,6 +51,6 @@ class SM_✣:
     def step (self):
         {
             "idle": self.step_idle,
-            "wait for w recrossing": self.step_wait_for_w_recrossing,
-            "wait for zero recrossing": self.step_wait_for_zero_recrossing,
+            "wait for max recrossing": self.step_wait_for_max_recrossing,
+            "wait for min recrossing": self.step_wait_for_min_recrossing,
         } [self.state] ()
