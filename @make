@@ -32,7 +32,10 @@ else
 fi
 
 set -eE pipefail
-trap '[ -f "${PBPCALLER}/out.✗" ] && (echo ; cat "${PBPCALLER}/out.✗")' ERR
+trap '
+  [[ -f "${PBPWD}/out.✗" ]]    && cat "${PBPWD}/out.✗"
+  [[ -f "${PBPCALLER}/out.✗" ]] && cat "${PBPCALLER}/out.✗"
+' ERR
 
 export SELF="${RANDOM}$$"
 
