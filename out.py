@@ -1,4 +1,4 @@
-class SM_looper:
+class SM_✣:
     
     def enter_idle (self):
         e = self.env

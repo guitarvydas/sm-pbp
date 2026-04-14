@@ -5,21 +5,17 @@
 # env:
 #  $PATH
 #  $WD ($(pwd))
-#  $TARGETPATH
+#  $CALLERPATH
 #  $TARGET
 #  $PYTHONPATH
 
 transmog=smdpl
 
 # 1. rebuild the transmogrifier ("compiler") every time...
-echo ' *** 1 ***'
 das2json ${transmog}.drawio
-echo ' *** 1a ***' 
 python ${transmog}.py "${TARGET}".drawio main ${transmog}.drawio.json | splitoutputs
-echo ' *** 1b ***'
 checkfailure
-	
-cat out.py | python replace.py "✣" "${TARGET}" >"${TARGETPATH}/${TARGET}.py"
+cat out.py | python replace.py "✣" "${TARGET}" >"${CALLERPATH}/${TARGET}.py"
 ./@testc
 
 echo ' *** DONE ***'
