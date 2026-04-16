@@ -4,12 +4,13 @@
 # TOP LEVEL
 # env:
 #  $PATH
-#  $WD ($(pwd))
+#  $TOOLWD ($(pwd))
 #  $CALLERPATH
 #  $TARGET
 #  $PYTHONPATH
 
 transmog=smdpl
+source ./@defc
 
 # 1. rebuild the transmogrifier ("compiler") every time...
 das2json ${transmog}.drawio

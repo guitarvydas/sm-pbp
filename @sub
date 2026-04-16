@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# run @makec as a sub-project
+# determine that this is a sub-project by the given command line args
+arg1=$(realpath ~/projects/sm-pbp)
+arg2=$(realpath ~/projects/pbp-pong)
+arg3=ballhit
+
+clone_pbp_dev
+
+set -eE
+export SHELLOPTS
+shopt -s nullglob
+
+source ./@defc
+
+export TOOLWD="${arg1}"
+# export PBP="${TOOLWD}/pbp" ## must be defined by @makec
+export PATH="${PBP}:$PATH"
+export CALLERPATH="${TOOLWD}"
+export TARGET=${arg3}
+export PYTHONPATH="${PBP}/kernel:${PYTHONPATH}"
+date > "${CALLERPATH}/pbplog.txt"
+
+set -eE pipefail
+
+rm -f *.mr
+rm -f *.json
+rm -f temp.*
+rm -f out.*
+cd "${TOOLWD}"
+
+./@makec ${TARGET}
+
+rm -f temp.*
+
+
