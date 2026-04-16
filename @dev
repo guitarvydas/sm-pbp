@@ -1,0 +1,25 @@
+#!/bin/bash
+
+clone_pbp_dev
+
+set -eE
+export SHELLOPTS
+shopt -s nullglob
+
+export CALLERPATH="${TOOLWD}"
+export TARGET=looper
+"${PBP}"/resetlog
+
+set -eE pipefail
+
+rm -f *.mr
+rm -f *.json
+rm -f temp.*
+rm -f out.*
+cd "${TOOLWD}"
+
+./@makec ${TARGET}
+
+rm -f temp.*
+
+

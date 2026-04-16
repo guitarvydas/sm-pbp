@@ -1,0 +1,34 @@
+#!/bin/bash
+
+clone_pbp_dev
+
+set -eE
+export SHELLOPTS
+shopt -s nullglob
+
+export WD="$(pwd)"
+export PBP="${WD}/pbp"
+export PATH="${PBP}:$PATH"
+export CALLERPATH="${WD}"
+export TARGET=looper
+export PYTHONPATH="${PBP}/kernel:${PYTHONPATH}"
+"${PBP}"/resetlog
+
+set -eE pipefail
+# trap '
+#   [[ -f "${PBPWD}/out.✗" ]]    && cat "${PBPWD}/out.✗"
+#   [[ -f "${PBPCALLER}/out.✗" ]] && cat "${PBPCALLER}/out.✗"
+# ' ERR
+
+
+rm -f *.mr
+rm -f *.json
+rm -f temp.*
+rm -f out.*
+cd "${WD}"
+
+./@makec ${TARGET}
+
+rm -f temp.*
+
+

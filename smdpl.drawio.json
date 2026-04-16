@@ -4,71 +4,75 @@
     "children": [
       {
         "name": ":$ _/t2t rmgeometry",
-        "id": 7
+        "id": 8
       },
       {
         "name": ":$ _/t2t cull",
-        "id": 11
+        "id": 12
       },
       {
         "name": ":$ _/t2t rmdiv",
-        "id": 15
+        "id": 16
       },
       {
         "name": ":$ _/t2t rmspan",
-        "id": 19
+        "id": 20
       },
       {
         "name": ":$ _/t2t unhtml",
-        "id": 23
+        "id": 24
       },
       {
         "name": ":$ _/t2t kinds",
-        "id": 27
+        "id": 28
       },
       {
         "name": ":$ _/t2t mr2json",
-        "id": 31
+        "id": 32
       },
       {
         "name": ":$ _/t2t mr2pl",
-        "id": 35
+        "id": 36
       },
       {
         "name": ":$ python commarpar.py",
-        "id": 39
+        "id": 40
       },
       {
         "name": ":$ _/t2t code",
-        "id": 43
+        "id": 44
       },
       {
         "name": ":$ _/brace_indent",
-        "id": 47
+        "id": 48
       },
       {
         "name": ":$ _/t2t sm sm-metapy",
-        "id": 51
+        "id": 52
       },
       {
         "name": ":$ _/indent",
-        "id": 55
+        "id": 56
       },
       {
         "name": "Read Text File",
-        "id": 59
+        "id": 60
       },
       {
         "name": "🚫",
-        "id": 63
+        "id": 64
       },
       {
         "name": ":$ swipl -g '[emit].' -l /dev/stdin -g 'emit.' -g 'halt.'",
-        "id": 66
+        "id": 67
       },
       {
         "name": ":$ swipl -g '[mergeCode].' -l /dev/stdin -g 'run.' -g 'halt.'",
-        "id": 70
+        "id": 71
+      },
+      {
+        "name": ":fail",
+        "id": 75
       }
     ],
     "connections": [
@@ -78,7 +82,7 @@
         "target_port": "",
         "target": {
           "name": "Read Text File",
-          "id": 59
+          "id": 60
         }
       },
       {
@@ -87,11 +91,11 @@
         "target_port": "",
         "source": {
           "name": ":$ _/t2t rmgeometry",
-          "id": 7
+          "id": 8
         },
         "target": {
           "name": ":$ _/t2t cull",
-          "id": 11
+          "id": 12
         }
       },
       {
@@ -100,11 +104,11 @@
         "target_port": "",
         "source": {
           "name": ":$ _/t2t rmdiv",
-          "id": 15
+          "id": 16
         },
         "target": {
           "name": ":$ _/t2t rmspan",
-          "id": 19
+          "id": 20
         }
       },
       {
@@ -113,11 +117,11 @@
         "target_port": "",
         "source": {
           "name": ":$ _/t2t cull",
-          "id": 11
+          "id": 12
         },
         "target": {
           "name": ":$ _/t2t rmdiv",
-          "id": 15
+          "id": 16
         }
       },
       {
@@ -126,11 +130,11 @@
         "target_port": "",
         "source": {
           "name": ":$ _/t2t unhtml",
-          "id": 23
+          "id": 24
         },
         "target": {
           "name": ":$ _/t2t kinds",
-          "id": 27
+          "id": 28
         }
       },
       {
@@ -139,11 +143,11 @@
         "target_port": "",
         "source": {
           "name": ":$ _/t2t kinds",
-          "id": 27
+          "id": 28
         },
         "target": {
           "name": ":$ _/t2t mr2pl",
-          "id": 35
+          "id": 36
         }
       },
       {
@@ -152,11 +156,11 @@
         "target_port": "",
         "source": {
           "name": ":$ _/t2t kinds",
-          "id": 27
+          "id": 28
         },
         "target": {
           "name": ":$ _/t2t mr2json",
-          "id": 31
+          "id": 32
         }
       },
       {
@@ -165,11 +169,11 @@
         "target_port": "",
         "source": {
           "name": ":$ _/t2t rmspan",
-          "id": 19
+          "id": 20
         },
         "target": {
           "name": ":$ _/t2t unhtml",
-          "id": 23
+          "id": 24
         }
       },
       {
@@ -178,11 +182,11 @@
         "target_port": "",
         "source": {
           "name": ":$ _/t2t mr2pl",
-          "id": 35
+          "id": 36
         },
         "target": {
           "name": ":$ python commarpar.py",
-          "id": 39
+          "id": 40
         }
       },
       {
@@ -191,11 +195,11 @@
         "target_port": "",
         "source": {
           "name": ":$ python commarpar.py",
-          "id": 39
+          "id": 40
         },
         "target": {
           "name": ":$ swipl -g '[mergeCode].' -l /dev/stdin -g 'run.' -g 'halt.'",
-          "id": 70
+          "id": 71
         }
       },
       {
@@ -204,11 +208,11 @@
         "target_port": "",
         "source": {
           "name": ":$ _/t2t sm sm-metapy",
-          "id": 51
+          "id": 52
         },
         "target": {
           "name": ":$ _/indent",
-          "id": 55
+          "id": 56
         }
       },
       {
@@ -217,11 +221,11 @@
         "target_port": "",
         "source": {
           "name": ":$ _/brace_indent",
-          "id": 47
+          "id": 48
         },
         "target": {
           "name": ":$ _/t2t sm sm-metapy",
-          "id": 51
+          "id": 52
         }
       },
       {
@@ -230,11 +234,11 @@
         "target_port": "",
         "source": {
           "name": "Read Text File",
-          "id": 59
+          "id": 60
         },
         "target": {
           "name": ":$ _/t2t rmgeometry",
-          "id": 7
+          "id": 8
         }
       },
       {
@@ -243,11 +247,11 @@
         "target_port": "",
         "source": {
           "name": ":$ _/indent",
-          "id": 55
+          "id": 56
         },
         "target": {
           "name": "🚫",
-          "id": 63
+          "id": 64
         }
       },
       {
@@ -256,11 +260,11 @@
         "target_port": "",
         "source": {
           "name": ":$ _/t2t sm sm-metapy",
-          "id": 51
+          "id": 52
         },
         "target": {
           "name": "🚫",
-          "id": 63
+          "id": 64
         }
       },
       {
@@ -269,11 +273,11 @@
         "target_port": "",
         "source": {
           "name": ":$ _/brace_indent",
-          "id": 47
+          "id": 48
         },
         "target": {
           "name": "🚫",
-          "id": 63
+          "id": 64
         }
       },
       {
@@ -282,11 +286,11 @@
         "target_port": "",
         "source": {
           "name": ":$ _/t2t code",
-          "id": 43
+          "id": 44
         },
         "target": {
           "name": "🚫",
-          "id": 63
+          "id": 64
         }
       },
       {
@@ -295,11 +299,11 @@
         "target_port": "",
         "source": {
           "name": ":$ swipl -g '[mergeCode].' -l /dev/stdin -g 'run.' -g 'halt.'",
-          "id": 70
+          "id": 71
         },
         "target": {
           "name": "🚫",
-          "id": 63
+          "id": 64
         }
       },
       {
@@ -308,11 +312,11 @@
         "target_port": "",
         "source": {
           "name": ":$ python commarpar.py",
-          "id": 39
+          "id": 40
         },
         "target": {
           "name": "🚫",
-          "id": 63
+          "id": 64
         }
       },
       {
@@ -321,11 +325,11 @@
         "target_port": "",
         "source": {
           "name": ":$ _/t2t mr2pl",
-          "id": 35
+          "id": 36
         },
         "target": {
           "name": "🚫",
-          "id": 63
+          "id": 64
         }
       },
       {
@@ -334,11 +338,11 @@
         "target_port": "",
         "source": {
           "name": ":$ _/t2t mr2json",
-          "id": 31
+          "id": 32
         },
         "target": {
           "name": "🚫",
-          "id": 63
+          "id": 64
         }
       },
       {
@@ -347,11 +351,11 @@
         "target_port": "",
         "source": {
           "name": ":$ _/t2t mr2pl",
-          "id": 35
+          "id": 36
         },
         "target": {
           "name": "🚫",
-          "id": 63
+          "id": 64
         }
       },
       {
@@ -360,11 +364,11 @@
         "target_port": "",
         "source": {
           "name": ":$ _/t2t mr2json",
-          "id": 31
+          "id": 32
         },
         "target": {
           "name": "🚫",
-          "id": 63
+          "id": 64
         }
       },
       {
@@ -373,11 +377,11 @@
         "target_port": "",
         "source": {
           "name": ":$ _/t2t kinds",
-          "id": 27
+          "id": 28
         },
         "target": {
           "name": "🚫",
-          "id": 63
+          "id": 64
         }
       },
       {
@@ -386,11 +390,11 @@
         "target_port": "",
         "source": {
           "name": ":$ _/t2t unhtml",
-          "id": 23
+          "id": 24
         },
         "target": {
           "name": "🚫",
-          "id": 63
+          "id": 64
         }
       },
       {
@@ -399,11 +403,11 @@
         "target_port": "",
         "source": {
           "name": ":$ _/t2t rmspan",
-          "id": 19
+          "id": 20
         },
         "target": {
           "name": "🚫",
-          "id": 63
+          "id": 64
         }
       },
       {
@@ -412,11 +416,11 @@
         "target_port": "",
         "source": {
           "name": ":$ _/t2t rmdiv",
-          "id": 15
+          "id": 16
         },
         "target": {
           "name": "🚫",
-          "id": 63
+          "id": 64
         }
       },
       {
@@ -425,11 +429,11 @@
         "target_port": "",
         "source": {
           "name": ":$ _/t2t cull",
-          "id": 11
+          "id": 12
         },
         "target": {
           "name": "🚫",
-          "id": 63
+          "id": 64
         }
       },
       {
@@ -438,11 +442,11 @@
         "target_port": "",
         "source": {
           "name": ":$ _/t2t rmgeometry",
-          "id": 7
+          "id": 8
         },
         "target": {
           "name": "🚫",
-          "id": 63
+          "id": 64
         }
       },
       {
@@ -451,11 +455,11 @@
         "target_port": "",
         "source": {
           "name": "Read Text File",
-          "id": 59
+          "id": 60
         },
         "target": {
           "name": "🚫",
-          "id": 63
+          "id": 64
         }
       },
       {
@@ -464,11 +468,11 @@
         "target_port": "",
         "source": {
           "name": ":$ swipl -g '[emit].' -l /dev/stdin -g 'emit.' -g 'halt.'",
-          "id": 66
+          "id": 67
         },
         "target": {
           "name": "🚫",
-          "id": 63
+          "id": 64
         }
       },
       {
@@ -477,11 +481,11 @@
         "target_port": "",
         "source": {
           "name": ":$ swipl -g '[emit].' -l /dev/stdin -g 'emit.' -g 'halt.'",
-          "id": 66
+          "id": 67
         },
         "target": {
           "name": ":$ _/brace_indent",
-          "id": 47
+          "id": 48
         }
       },
       {
@@ -490,11 +494,11 @@
         "target_port": "",
         "source": {
           "name": ":$ _/t2t code",
-          "id": 43
+          "id": 44
         },
         "target": {
           "name": ":$ swipl -g '[emit].' -l /dev/stdin -g 'emit.' -g 'halt.'",
-          "id": 66
+          "id": 67
         }
       },
       {
@@ -503,11 +507,24 @@
         "target_port": "",
         "source": {
           "name": ":$ swipl -g '[mergeCode].' -l /dev/stdin -g 'run.' -g 'halt.'",
-          "id": 70
+          "id": 71
         },
         "target": {
           "name": ":$ _/t2t code",
-          "id": 43
+          "id": 44
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": "🚫",
+          "id": 64
+        },
+        "target": {
+          "name": ":fail",
+          "id": 75
         }
       },
       {
@@ -516,7 +533,7 @@
         "target_port": "mr.json",
         "source": {
           "name": ":$ _/t2t mr2json",
-          "id": 31
+          "id": 32
         }
       },
       {
@@ -525,7 +542,7 @@
         "target_port": "py",
         "source": {
           "name": ":$ _/indent",
-          "id": 55
+          "id": 56
         }
       },
       {
@@ -534,16 +551,25 @@
         "target_port": "sm",
         "source": {
           "name": ":$ _/brace_indent",
-          "id": 47
+          "id": 48
         }
       },
       {
         "dir": 2,
         "source_port": "",
-        "target_port": "✗",
+        "target_port": "txt",
         "source": {
           "name": "🚫",
-          "id": 63
+          "id": 64
+        }
+      },
+      {
+        "dir": 2,
+        "source_port": "",
+        "target_port": "👍👎",
+        "source": {
+          "name": ":fail",
+          "id": 75
         }
       }
     ],

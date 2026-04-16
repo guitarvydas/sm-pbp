@@ -8,7 +8,8 @@ mergeCode(Did):-
 	    trCode(did=Did, id=_, parent=Tid, value=Code),
             assert(transition(did=Did, id=Tid, parent=Pt, source=T, target=Dest, code=Code))
 	)
-    ).
+    ),!.
+mergeCode(_).
 
 run:-
     forall(diagram(did=Did),mergeCode(Did)),

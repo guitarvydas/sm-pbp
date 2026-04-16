@@ -1,0 +1,9 @@
+#!/bin/bash
+echo ' *** TEST ***'
+# 3. run the test jig, which includes looper.py. The test jig, itself, is drawn as a diagram "testjig.drawio" and needs "testermain.py" to kick it off
+# and installs the parts (formatted for use in the diagram) needed by the test jig ("stimulus.py" and "testenvelope.py" (which imports "looper.py"))
+echo '*** automated test ***'
+#export PBPSTEPPING="1"
+das2json testjig.drawio
+python testermain.py "" test testjig.drawio.json
+
