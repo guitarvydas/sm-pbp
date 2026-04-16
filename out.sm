@@ -20,3 +20,34 @@ state "wait for min recrossing" {
         }
     {}
     }
+state "idle" {
+    {}
+    {
+        %next "idle" %when (e.x <= e.xmin) { e.scoreRight () }
+        }
+    {}
+    }
+state "left_paddle" {
+    {}
+    {
+        }
+    {}
+    }
+state "right_paddle" {
+    {}
+    {
+        }
+    {}
+    }
+state "ceiling" {
+    {}
+    {
+        }
+    {}
+    }
+state "floor" {
+    {}
+    {
+        }
+    {}
+    }

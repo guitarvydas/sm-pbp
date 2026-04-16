@@ -73,6 +73,42 @@
       {
         "name": ":fail",
         "id": 75
+      },
+      {
+        "name": ":?A",
+        "id": 78
+      },
+      {
+        "name": ":?x",
+        "id": 80
+      },
+      {
+        "name": ":?y",
+        "id": 82
+      },
+      {
+        "name": ":?w",
+        "id": 84
+      },
+      {
+        "name": ":?v",
+        "id": 86
+      },
+      {
+        "name": ":v",
+        "id": 88
+      },
+      {
+        "name": ":w",
+        "id": 91
+      },
+      {
+        "name": ":x",
+        "id": 94
+      },
+      {
+        "name": ":y",
+        "id": 97
       }
     ],
     "connections": [
@@ -83,6 +119,15 @@
         "target": {
           "name": "Read Text File",
           "id": 60
+        }
+      },
+      {
+        "dir": 0,
+        "source_port": "",
+        "target_port": "",
+        "target": {
+          "name": ":?A",
+          "id": 78
         }
       },
       {
@@ -525,6 +570,110 @@
         "target": {
           "name": ":fail",
           "id": 75
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": ":$ python commarpar.py",
+          "id": 40
+        },
+        "target": {
+          "name": ":x",
+          "id": 94
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": ":$ swipl -g '[emit].' -l /dev/stdin -g 'emit.' -g 'halt.'",
+          "id": 67
+        },
+        "target": {
+          "name": ":y",
+          "id": 97
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": ":$ _/t2t mr2pl",
+          "id": 36
+        },
+        "target": {
+          "name": ":w",
+          "id": 91
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": ":$ _/t2t kinds",
+          "id": 28
+        },
+        "target": {
+          "name": ":v",
+          "id": 88
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": ":y",
+          "id": 97
+        },
+        "target": {
+          "name": ":?y",
+          "id": 82
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": ":x",
+          "id": 94
+        },
+        "target": {
+          "name": ":?x",
+          "id": 80
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": ":w",
+          "id": 91
+        },
+        "target": {
+          "name": ":?w",
+          "id": 84
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": ":v",
+          "id": 88
+        },
+        "target": {
+          "name": ":?v",
+          "id": 86
         }
       },
       {
