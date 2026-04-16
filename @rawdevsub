@@ -1,0 +1,3 @@
+#!/bin/bash
+# determine that this is a sub-project by the given command line args
+./@sub "$(realpath ~/projects/sm-pbp)" "$(realpath ~/projects/pbp-pong)" ballhit

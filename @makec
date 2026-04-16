@@ -1,8 +1,7 @@
 #!/bin/bash
 
 ######### commands specific to this project #############
-# TOP LEVEL
-# env:
+# env vars that may be used in this script:
 #  $PATH
 #  $TOOLWD ($(pwd))
 #  $CALLERPATH
@@ -10,16 +9,12 @@
 #  $PYTHONPATH
 
 transmog=smdpl
-source ./@defc
 
 # 1. rebuild the transmogrifier ("compiler") every time...
 das2json ${transmog}.drawio
 python ${transmog}.py "${TARGET}".drawio main ${transmog}.drawio.json | splitoutputs
 checkfailure
 cat out.py | python replace.py "✣" "${TARGET}" >"${CALLERPATH}/${TARGET}.py"
-./@testc
-
-echo ' *** DONE ***'
 
 ############################
 

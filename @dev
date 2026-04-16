@@ -6,7 +6,6 @@ set -eE
 export SHELLOPTS
 shopt -s nullglob
 
-source ./@defc
 export CALLERPATH="${TOOLWD}"
 export TARGET=looper
 "${PBP}"/resetlog
