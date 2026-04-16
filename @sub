@@ -13,14 +13,9 @@ export SHELLOPTS
 shopt -s nullglob
 
 source ./@defc
-
-export TOOLWD="${arg1}"
-# export PBP="${TOOLWD}/pbp" ## must be defined by @makec
-export PATH="${PBP}:$PATH"
 export CALLERPATH="${TOOLWD}"
-export TARGET=${arg3}
-export PYTHONPATH="${PBP}/kernel:${PYTHONPATH}"
-date > "${CALLERPATH}/pbplog.txt"
+export TARGET=looper
+"${PBP}"/resetlog
 
 set -eE pipefail
 
@@ -33,5 +28,4 @@ cd "${TOOLWD}"
 ./@makec ${TARGET}
 
 rm -f temp.*
-
 

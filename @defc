@@ -6,3 +6,7 @@ export PATH="${PBP}:$PATH"
 export PYTHONPATH="${PBP}/kernel:${PYTHONPATH}"
 # T2TLIBD is the lib directory for t2t - PBP tools should not contain hard-coded directory paths
 export T2TLIBD="${PBP}/t2td/lib"
+
+# must be defined by caller (top level or sub level)
+# CALLERPATH
+# TARGET
