@@ -27,8 +27,7 @@ diagram(⟪diagramid⟫⟪diagramname⟫).«objs»’
 
   dgmid [name eq str] = ‛ did=«str»,’
   dgmname [name eq str] = ‛ dname=«str»,’
-  attr_long [name eq lstr] = ‛ «name»«eq»«lstr»,’
-  attr_other [name eq str] = ‛ «name»«eq»«str»,’
+  attr [name eq str] = ‛ «name»«eq»«str»,’
   Object_transition [_ lb attr+ rb] = ‛\ntransition(⟪diagramid⟫«attr»).’ 
   Object_transitionCode [_ lb attr+ rb] = ‛\ntrCode(⟪diagramid⟫«attr»).’ 
   Object_state [_ lb attr+ rb] = ‛\nstate(⟪diagramid⟫«attr»).’ 

@@ -5,9 +5,7 @@ mr2pl {
     | "diagram" "{" dgmname dgmid Objects "}" -- idsecond
   dgmid = "id" "=" str
   dgmname = "name" "=" str
-  attr = 
-    | ("id" | "parent" | "source" | "target") "=" str -- long
-    | name "=" str  -- other
+  attr =  name "=" str
   Objects = Object+
   Object =
     | "transition" "{" attr+ "}"     -- transition
