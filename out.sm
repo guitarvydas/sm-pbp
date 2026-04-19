@@ -1,0 +1,50 @@
+machine "looper" {
+    state "idle" {
+        {}
+        {
+            %next "wait for max recrossing" %when (e.x > e.max) {e.reverse ()}
+            %next "wait for min recrossing" %when (e.x < e.min) {e.reverse ()}
+            }
+        {}
+        }
+    state "wait for max recrossing" {
+        {}
+        {
+            %next "idle" %when (e.x < e.max)
+            }
+        {}
+        }
+    state "wait for min recrossing" {
+        {}
+        {
+            %next "idle" %when (e.x > e.min)
+            }
+        {}
+        }
+    
+    }
+machine "Page_2" {
+    state "idle2" {
+        {}
+        {
+            %next "S2" %when (e.x > e.max) {e.reverse ()}
+            %next "S3" %when (e.x < e.min) {e.reverse ()}
+            }
+        {}
+        }
+    state "S2" {
+        {}
+        {
+            %next "idle2" %when (e.x < e.max)
+            }
+        {}
+        }
+    state "S3" {
+        {}
+        {
+            %next "idle2" %when (e.x > e.min)
+            }
+        {}
+        }
+    
+    }

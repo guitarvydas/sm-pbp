@@ -1,0 +1,105 @@
+[
+"diagram" : {
+name="looper",
+id="vXABhurDzZuKG-4kYwzf",
+[
+"transition" : {
+id="yK0KRwzggwMbkE22hVbx-13",
+parent="yK0KRwzggwMbkE22hVbx-1",
+source="yK0KRwzggwMbkE22hVbx-17",
+target="yK0KRwzggwMbkE22hVbx-20",},
+"transitionCode" : {
+id="yK0KRwzggwMbkE22hVbx-14",
+parent="yK0KRwzggwMbkE22hVbx-13",
+value="e.x > e.max{e.reverse ()}",},
+"transition" : {
+id="yK0KRwzggwMbkE22hVbx-15",
+parent="yK0KRwzggwMbkE22hVbx-1",
+source="yK0KRwzggwMbkE22hVbx-17",
+target="yK0KRwzggwMbkE22hVbx-23",},
+"transitionCode" : {
+id="yK0KRwzggwMbkE22hVbx-16",
+parent="yK0KRwzggwMbkE22hVbx-15",
+value="e.x < e.min{e.reverse ()}",},
+"state" : {
+id="yK0KRwzggwMbkE22hVbx-17",
+parent="yK0KRwzggwMbkE22hVbx-1",
+value="idle",},
+"transition" : {
+id="yK0KRwzggwMbkE22hVbx-18",
+parent="yK0KRwzggwMbkE22hVbx-1",
+source="yK0KRwzggwMbkE22hVbx-20",
+target="yK0KRwzggwMbkE22hVbx-17",},
+"transitionCode" : {
+id="yK0KRwzggwMbkE22hVbx-19",
+parent="yK0KRwzggwMbkE22hVbx-18",
+value="e.x < e.max",},
+"state" : {
+id="yK0KRwzggwMbkE22hVbx-20",
+parent="yK0KRwzggwMbkE22hVbx-1",
+value="wait for max recrossing",},
+"transition" : {
+id="yK0KRwzggwMbkE22hVbx-21",
+parent="yK0KRwzggwMbkE22hVbx-1",
+source="yK0KRwzggwMbkE22hVbx-23",
+target="yK0KRwzggwMbkE22hVbx-17",},
+"transitionCode" : {
+id="yK0KRwzggwMbkE22hVbx-22",
+parent="yK0KRwzggwMbkE22hVbx-21",
+value="e.x > e.min",},
+"state" : {
+id="yK0KRwzggwMbkE22hVbx-23",
+parent="yK0KRwzggwMbkE22hVbx-1",
+value="wait for min recrossing",},]}
+"diagram" : {
+id="cSmlv2GyPqkFXdwr3plV",
+name="Page-2",
+[
+"transition" : {
+id="Q-ERQmmDIO46H5e8BoSB-1",
+parent="1",
+source="Q-ERQmmDIO46H5e8BoSB-5",
+target="Q-ERQmmDIO46H5e8BoSB-8",},
+"transitionCode" : {
+id="Q-ERQmmDIO46H5e8BoSB-2",
+parent="Q-ERQmmDIO46H5e8BoSB-1",
+value="e.x > e.max{e.reverse ()}",},
+"transition" : {
+id="Q-ERQmmDIO46H5e8BoSB-3",
+parent="1",
+source="Q-ERQmmDIO46H5e8BoSB-5",
+target="Q-ERQmmDIO46H5e8BoSB-11",},
+"transitionCode" : {
+id="Q-ERQmmDIO46H5e8BoSB-4",
+parent="Q-ERQmmDIO46H5e8BoSB-3",
+value="e.x < e.min{e.reverse ()}",},
+"state" : {
+id="Q-ERQmmDIO46H5e8BoSB-5",
+parent="1",
+value="idle2",},
+"transition" : {
+id="Q-ERQmmDIO46H5e8BoSB-6",
+parent="1",
+source="Q-ERQmmDIO46H5e8BoSB-8",
+target="Q-ERQmmDIO46H5e8BoSB-5",},
+"transitionCode" : {
+id="Q-ERQmmDIO46H5e8BoSB-7",
+parent="Q-ERQmmDIO46H5e8BoSB-6",
+value="e.x < e.max",},
+"state" : {
+id="Q-ERQmmDIO46H5e8BoSB-8",
+parent="1",
+value="S2",},
+"transition" : {
+id="Q-ERQmmDIO46H5e8BoSB-9",
+parent="1",
+source="Q-ERQmmDIO46H5e8BoSB-11",
+target="Q-ERQmmDIO46H5e8BoSB-5",},
+"transitionCode" : {
+id="Q-ERQmmDIO46H5e8BoSB-10",
+parent="Q-ERQmmDIO46H5e8BoSB-9",
+value="e.x > e.min",},
+"state" : {
+id="Q-ERQmmDIO46H5e8BoSB-11",
+parent="1",
+value="S3",},]}]
