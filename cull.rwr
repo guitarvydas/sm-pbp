@@ -10,7 +10,6 @@
   attr_value [name eq str] = ‛\n«name»=«str»’
   attr_source [name eq str] = ‛\n«name»=«str»’
   attr_target [name eq str] = ‛\n«name»=«str»’
-  attr_name [name eq str] = ‛\n«name»=«str»’
   attr_ignore [name eq str] = ‛’
   name [letter alnum*] = ‛«letter»«alnum»’
   str [_begin tail] = ‛"«tail»’

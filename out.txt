@@ -1,9 +1,0 @@
-Error: Line 3, col 2:
-  2 | diagram {
-> 3 |  name="Page-1" id="i83mPZXFrIGXZ7r0Wgs5"
-       ^
-  4 | transition { id="k4BcOIXPNITnRUTkEMEZ-5" parent="1" source="k4BcOIXPNITnRUTkEMEZ-9" target="k4BcOIXPNITnRUTkEMEZ-12"}
-Expected "id"
-
-grammar = "mr2pl
-"

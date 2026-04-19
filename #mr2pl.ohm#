@@ -1,7 +1,9 @@
 mr2pl {
   Group = "group" "{" Diagram+ "}"
-  Diagram = "diagram" "{" dgmid Object+ "}"
+  Diagram = "diagram" "{" dgmidOrName dgmidOrName Object+ "}"
+  dgmidOrName = dmgid | dgmname
   dgmid = "id" "=" lstr
+  dgmname = "name" "=" lstr
   attr = 
     | ("id" | "parent" | "source" | "target") "=" lstr -- long
     | name "=" str  -- other
