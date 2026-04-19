@@ -3,10 +3,10 @@ mr2pl {
   Diagram =
     | "diagram" "{" dgmid dgmname Objects "}" -- idfirst
     | "diagram" "{" dgmname dgmid Objects "}" -- idsecond
-  dgmid = "id" "=" lstr
-  dgmname = "name" "=" lstr
+  dgmid = "id" "=" str
+  dgmname = "name" "=" str
   attr = 
-    | ("id" | "parent" | "source" | "target") "=" lstr -- long
+    | ("id" | "parent" | "source" | "target") "=" str -- long
     | name "=" str  -- other
   Objects = Object+
   Object =
@@ -17,7 +17,4 @@ mr2pl {
   uletter = letter | "_"
   ualnum = alnum | "_"
   str = "\"" (~"\"" any)* "\""
-  lstr =
-    | "\"" (~"\"" ~"-" any)+ "-" (~"\"" any)+ "\"" -- long
-    | str -- other
 }

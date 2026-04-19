@@ -23,7 +23,7 @@ machine "looper" {
         }
     
     }
-machine "Page_2" {
+machine "Page-2" {
     state "idle2" {
         {}
         {

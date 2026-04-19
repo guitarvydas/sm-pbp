@@ -36,6 +36,4 @@ diagram(⟪diagramid⟫⟪diagramname⟫).«objs»’
   uletter [c] = ‛«c»’
   ualnum [c] = ‛«c»’
   str [lq cs* rq] = ‛«lq»«cs»«rq»’
-  lstr_long [lq lcs+ dash rcs+ rq] = ‛"«lcs»_«rcs»"’
-  lstr_other [s] = ‛«s»’
 }
