@@ -28,7 +28,7 @@ code {
 
   name = uletter ualnum*
   uletter = letter | "_"
-  ualnum = alnum | "_"
+  ualnum = alnum | "_" 
   str = "\"" (~"\"" any)* "\""
   space += ","
 }

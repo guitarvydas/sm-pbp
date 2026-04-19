@@ -12,7 +12,7 @@ mergeCode(Did):-
 mergeCode(_).
 
 run:-
-    forall(diagram(did=Did),mergeCode(Did)),
-    listing(diagram/1),
+    forall(diagram(did=Did,dname=_),mergeCode(Did)),
+    listing(diagram/2),
     listing(state/4),
     listing(transition/6).

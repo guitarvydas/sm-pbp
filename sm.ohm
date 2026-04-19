@@ -1,5 +1,6 @@
 sm {
-  Main = State+
+  Main = Machine+
+  Machine = "machine" name "{" State+ "}"
   State = "state" name "{" Enter Step Exit "}"
   Enter = enteraction
   Step = action

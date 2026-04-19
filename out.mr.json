@@ -1,5 +1,6 @@
 [
 "diagram" : {
+name="Page-1",
 id="i83mPZXFrIGXZ7r0Wgs5",
 [
 "transition" : {
@@ -52,6 +53,7 @@ parent="1",
 value="wait for min recrossing",},]}
 "diagram" : {
 id="qyek1z9CM92wU2lFHgfb",
+name="hit",
 [
 "transition" : {
 id="A83PmAvtoI3nI4cXlAqm-8",

@@ -1,10 +1,12 @@
-mr2json {
+mr2pl {
   Group = "group" "{" Diagram+ "}"
-  Diagram = "diagram" "{" dgmid Object+ "}"
-  dgmid = "id" "=" lstr
-  attr = 
-    | ("id" | "parent" | "source" | "target") "=" lstr -- long
-    | name "=" str  -- other
+  Diagram =
+    | "diagram" "{" dgmid dgmname Objects "}" -- idfirst
+    | "diagram" "{" dgmname dgmid Objects "}" -- idsecond
+  dgmid = "id" "=" str
+  dgmname = "name" "=" str
+  attr =  name "=" str
+  Objects = Object+
   Object =
     | "transition" "{" attr+ "}"     -- transition
     | "transitionCode" "{" attr+ "}" -- transitionCode
@@ -13,7 +15,4 @@ mr2json {
   uletter = letter | "_"
   ualnum = alnum | "_"
   str = "\"" (~"\"" any)* "\""
-  lstr =
-    | "\"" (~"\"" ~"-" any)+ "-" (~"\"" any)+ "\"" -- long
-    | str -- other
 }

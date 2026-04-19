@@ -1,4 +1,4 @@
-class SM_✣:
+class SM_looper:
     
     def enter_idle (self):
         e = self.env
@@ -44,62 +44,61 @@ class SM_✣:
     def exit_wait_for_min_recrossing (self):
         e = self.env
         pass
-    def enter_idle (self):
-        e = self.env
-        self.state = "idle"
-        e.update (" >> entering 'idle'")
+    def __init__ (self, env):
+        self.env = env
+        self.state = None
+        self.enter_idle ()
+    def step (self):
+        {
+            "idle": self.step_idle,
+            "wait for max recrossing": self.step_wait_for_max_recrossing,
+            "wait for min recrossing": self.step_wait_for_min_recrossing,
+        } [self.state] ()
         
-    def step_idle (self):
+class SM_Page_2:
+    
+    def enter_idle2 (self):
         e = self.env
-        if (e.x <= e.xmin):
-            self.exit_idle ()
-            e.scoreRight ()
-            self.enter_idle ()
-    def exit_idle (self):
+        self.state = "idle2"
+        e.update (" >> entering 'idle2'")
+        
+    def step_idle2 (self):
+        e = self.env
+        if (e.x > e.max):
+            self.exit_idle2 ()
+            e.reverse ()
+            self.enter_S2 ()
+        if (e.x < e.min):
+            self.exit_idle2 ()
+            e.reverse ()
+            self.enter_S3 ()
+    def exit_idle2 (self):
         e = self.env
         pass
-    def enter_left_paddle (self):
+    def enter_S2 (self):
         e = self.env
-        self.state = "left_paddle"
-        e.update (" >> entering 'left_paddle'")
+        self.state = "S2"
+        e.update (" >> entering 'S2'")
         
-    def step_left_paddle (self):
+    def step_S2 (self):
         e = self.env
-        
-    def exit_left_paddle (self):
+        if (e.x < e.max):
+            self.exit_S2 ()
+            self.enter_idle2 ()
+    def exit_S2 (self):
         e = self.env
         pass
-    def enter_right_paddle (self):
+    def enter_S3 (self):
         e = self.env
-        self.state = "right_paddle"
-        e.update (" >> entering 'right_paddle'")
+        self.state = "S3"
+        e.update (" >> entering 'S3'")
         
-    def step_right_paddle (self):
+    def step_S3 (self):
         e = self.env
-        
-    def exit_right_paddle (self):
-        e = self.env
-        pass
-    def enter_ceiling (self):
-        e = self.env
-        self.state = "ceiling"
-        e.update (" >> entering 'ceiling'")
-        
-    def step_ceiling (self):
-        e = self.env
-        
-    def exit_ceiling (self):
-        e = self.env
-        pass
-    def enter_floor (self):
-        e = self.env
-        self.state = "floor"
-        e.update (" >> entering 'floor'")
-        
-    def step_floor (self):
-        e = self.env
-        
-    def exit_floor (self):
+        if (e.x > e.min):
+            self.exit_S3 ()
+            self.enter_idle2 ()
+    def exit_S3 (self):
         e = self.env
         pass
     def __init__ (self, env):
@@ -111,9 +110,7 @@ class SM_✣:
             "idle": self.step_idle,
             "wait for max recrossing": self.step_wait_for_max_recrossing,
             "wait for min recrossing": self.step_wait_for_min_recrossing,
-            "idle": self.step_idle,
-            "left_paddle": self.step_left_paddle,
-            "right_paddle": self.step_right_paddle,
-            "ceiling": self.step_ceiling,
-            "floor": self.step_floor,
+            "idle2": self.step_idle2,
+            "S2": self.step_S2,
+            "S3": self.step_S3,
         } [self.state] ()

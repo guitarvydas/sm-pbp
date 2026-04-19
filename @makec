@@ -14,7 +14,7 @@ transmog=smdpl
 das2json ${transmog}.drawio
 python ${transmog}.py "${CALLERPATH}/${TARGET}".drawio main ${transmog}.drawio.json | splitoutputs
 checkfailure
-cat out.py | python replace.py "✣" "${TARGET}" >"${CALLERPATH}/${TARGET}.py"
+mv out.py "${CALLERPATH}/${TARGET}.py"
 
 ############################
 
