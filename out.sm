@@ -1,4 +1,4 @@
-machine "looper" {
+machine "Page-1" {
     state "idle" {
         {}
         {
@@ -23,26 +23,35 @@ machine "looper" {
         }
     
     }
-machine "Page-2" {
-    state "idle2" {
+machine "hit" {
+    state "idle" {
         {}
         {
-            %next "S2" %when (e.x > e.max) {e.reverse ()}
-            %next "S3" %when (e.x < e.min) {e.reverse ()}
+            %next "idle" %when (e.x <= e.xmin) { e.scoreRight () }
             }
         {}
         }
-    state "S2" {
+    state "left_paddle" {
         {}
         {
-            %next "idle2" %when (e.x < e.max)
             }
         {}
         }
-    state "S3" {
+    state "right_paddle" {
         {}
         {
-            %next "idle2" %when (e.x > e.min)
+            }
+        {}
+        }
+    state "ceiling" {
+        {}
+        {
+            }
+        {}
+        }
+    state "floor" {
+        {}
+        {
             }
         {}
         }
