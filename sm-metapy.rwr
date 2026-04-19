@@ -3,7 +3,7 @@
 % rewrite sm_metapy {
   Main [m+] = ‛«m»’
   Machine [_machine name lb State+ rb] =
-    ‛class SM_«name»:⤷
+    ‛class SM_⎨legalize ‛«name»’⎬:⤷
       «State»
       def __init__ (self, env):⤷
           self.env = env

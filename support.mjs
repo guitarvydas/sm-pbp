@@ -5,7 +5,7 @@ import { decode } from 'html-entities';
 let state_names = [];
 
 function legalize (s) {
-    return s.replace (/ /g, "_");
+    return s.replace (/ /g, "_").replace (/-/g, "_");
 }
 
 function memo_state_name (s) {

@@ -55,7 +55,7 @@ class SM_looper:
             "wait for min recrossing": self.step_wait_for_min_recrossing,
         } [self.state] ()
         
-class SM_Page-2:
+class SM_Page_2:
     
     def enter_idle2 (self):
         e = self.env
