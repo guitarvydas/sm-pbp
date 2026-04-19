@@ -1,0 +1,7 @@
+Error: Line 1, col 1:
+> 1 | 
+      ^
+Expected "state"
+
+grammar = "sm
+"

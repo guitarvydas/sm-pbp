@@ -3,17 +3,30 @@
 % rewrite mr2pl {
   Group [_ lb Array+ rb] = ‛«Array»’
   
-  Diagram [_ lb dgmid Object+ rb] =
+  Diagram_idfirst [_ lb dgmid dgmname objects rb] =
     ⎡ diagramid=‛«dgmid»’
-        ‛
+      ⎡ diagramname=‛«dgmname»’
+        ‛«objects»’
+      ⎦
+    ⎦
+	
+  Diagram_idsecond [_ lb dgmname dgmid objects rb] =
+    ⎡ diagramid=‛«dgmid»’
+      ⎡ diagramname=‛«dgmname»’
+        ‛«objects»’
+      ⎦
+    ⎦
+	
+        
+  Objects [objs+] = ‛
 :- discontiguous diagram/1.
 :- discontiguous trCode/4.
 :- discontiguous transition/5.
 :- discontiguous state/4.
-diagram(«dgmid»).«Object»’
-    ⎦
+diagram(⟪diagramid⟫⟪diagramname⟫).«objs»’
 
   dgmid [name eq str] = ‛ did=«str»,’
+  dgmname [name eq str] = ‛ dname=«str»,’
   attr_long [name eq lstr] = ‛ «name»«eq»«lstr»,’
   attr_other [name eq str] = ‛ «name»«eq»«str»,’
   Object_transition [_ lb attr+ rb] = ‛\ntransition(⟪diagramid⟫«attr»).’ 

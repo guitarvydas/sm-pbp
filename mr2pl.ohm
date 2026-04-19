@@ -1,10 +1,14 @@
 mr2pl {
   Group = "group" "{" Diagram+ "}"
-  Diagram = "diagram" "{" dgmid Object+ "}"
+  Diagram =
+    | "diagram" "{" dgmid dgmname Objects "}" -- idfirst
+    | "diagram" "{" dgmname dgmid Objects "}" -- idsecond
   dgmid = "id" "=" lstr
+  dgmname = "name" "=" lstr
   attr = 
     | ("id" | "parent" | "source" | "target") "=" lstr -- long
     | name "=" str  -- other
+  Objects = Object+
   Object =
     | "transition" "{" attr+ "}"     -- transition
     | "transitionCode" "{" attr+ "}" -- transitionCode
