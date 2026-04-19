@@ -1,0 +1,9 @@
+Error: Line 26, col 9:
+  25 |     }
+> 26 | machine i2 {
+               ^
+  27 |     
+Expected "\"" or "'"
+
+grammar = "sm
+"
