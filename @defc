@@ -1,5 +1,5 @@
 #!/bin/bash
-# @make must export TOOLWD, before calling this script ("@defc")XS
+# @make must export TOOLWD, before calling this script ("@defc")
 export WD="${TOOLWD}" # synonym for TOOLWD, sometimes it makes more sense to think in terms of WD, sometimes in terms of TOOLWD
 export PBP="${WD}/pbp"
 export PATH="${PBP}:$PATH"

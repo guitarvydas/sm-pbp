@@ -73,6 +73,10 @@
       {
         "name": ":fail",
         "id": 75
+      },
+      {
+        "name": ":?A",
+        "id": 78
       }
     ],
     "connections": [
@@ -525,6 +529,19 @@
         "target": {
           "name": ":fail",
           "id": 75
+        }
+      },
+      {
+        "dir": 1,
+        "source_port": "",
+        "target_port": "",
+        "source": {
+          "name": ":$ _/t2t kinds",
+          "id": 28
+        },
+        "target": {
+          "name": ":?A",
+          "id": 78
         }
       },
       {

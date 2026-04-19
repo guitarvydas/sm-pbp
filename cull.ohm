@@ -11,6 +11,7 @@ cull {
     | "value" "=" str -- value
     | "source" "=" str -- source
     | "target" "=" str -- target
+    | "name" "=" str -- name
     | name "=" str -- ignore
   name = letter alnum*
   str = "\"" strtail
