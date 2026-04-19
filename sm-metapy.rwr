@@ -1,8 +1,8 @@
 %parameter statename
 
 % rewrite sm_metapy {
-  Main [State+] =
-    ‛class SM_✣:⤷
+  Main [_machine name lb State+ rb] =
+    ‛class SM_«name»:⤷
       «State»
       def __init__ (self, env):⤷
           self.env = env

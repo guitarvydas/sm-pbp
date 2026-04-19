@@ -13,14 +13,16 @@ emitState(Diagram,IDstate):-
     emitTransitions(Diagram,IDstate,_,_,_),
     format("}~n{~w}~n}~n",[Exit]).
 
-emitAllStates(Diagram):-
+emitAllStates(Diagram,DiagramName):-
+    format("machine ~q {~n",DiagramName),
     forall(
 	state(did=Diagram, id=IDstate, parent=_, name=_, enter=_, exit=_),
 	emitState(Diagram,IDstate)
-    ).
+    ),
+    format("~n}~n").
 
 emit:-
     forall(
-	diagram(did=Diagram),
-	emitAllStates(Diagram)
+	diagram(did=Diagram,dname=DiagramName),
+	emitAllStates(Diagram,DiagramName)
     ).

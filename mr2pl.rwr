@@ -19,7 +19,7 @@
 	
         
   Objects [objs+] = ‛
-:- discontiguous diagram/1.
+:- discontiguous diagram/2.
 :- discontiguous trCode/4.
 :- discontiguous transition/5.
 :- discontiguous state/4.
