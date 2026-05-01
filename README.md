@@ -26,3 +26,5 @@ As it stands, `looper.py` is generated sa raw Python code meant to be copy/paste
 - At this moment, I'm just testing the looper code (diagram). When I'm happy with the tests, I will probably just copy it over and incorporate it into the Pong project.
 
 
+# Further Reading
+[Little Language Case Study - Generating Code for Simple State Machines](https://programmingsimplicity.substack.com/p/little-language-case-study-generating?r=1egdky)

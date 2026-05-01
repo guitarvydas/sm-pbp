@@ -1,4 +1,28 @@
-machine "Page-1" {
+machine "looper" {
+    state "idle" {
+        {}
+        {
+            %next "wait for max recrossing" %when (e.x > e.max) {e.reverse ()}
+            %next "wait for min recrossing" %when (e.x < e.min) {e.reverse ()}
+            }
+        {}
+        }
+    state "wait for max recrossing" {
+        {}
+        {
+            %next "idle" %when (e.x < e.max)
+            }
+        {}
+        }
+    state "wait for min recrossing" {
+        {}
+        {
+            %next "idle" %when (e.x > e.min)
+            }
+        {}
+        }
+    
+    }machine "Page-1" {
     state "idle" {
         {}
         {
@@ -24,6 +48,369 @@ machine "Page-1" {
     
     }
 machine "hit" {
+    state "idle" {
+        {}
+        {
+            %next "idle" %when (e.x <= e.xmin) { e.scoreRight () }
+            }
+        {}
+        }
+    state "left_paddle" {
+        {}
+        {
+            }
+        {}
+        }
+    state "right_paddle" {
+        {}
+        {
+            }
+        {}
+        }
+    state "ceiling" {
+        {}
+        {
+            }
+        {}
+        }
+    state "floor" {
+        {}
+        {
+            }
+        {}
+        }
+    
+    }machine "hit" {
+    state "idle" {
+        {}
+        {
+            %next "idle" %when (e.x <= e.xmin) { e.scoreRight () }
+            }
+        {}
+        }
+    state "left_paddle" {
+        {}
+        {
+            }
+        {}
+        }
+    state "right_paddle" {
+        {}
+        {
+            }
+        {}
+        }
+    state "ceiling" {
+        {}
+        {
+            }
+        {}
+        }
+    state "floor" {
+        {}
+        {
+            }
+        {}
+        }
+    
+    }machine "hit" {
+    state "idle" {
+        {}
+        {
+            %next "idle" %when (e.x <= e.xmin) { e.scoreRight () }
+            }
+        {}
+        }
+    state "left_paddle" {
+        {}
+        {
+            }
+        {}
+        }
+    state "right_paddle" {
+        {}
+        {
+            }
+        {}
+        }
+    state "ceiling" {
+        {}
+        {
+            }
+        {}
+        }
+    state "floor" {
+        {}
+        {
+            }
+        {}
+        }
+    
+    }machine "hit" {
+    state "idle" {
+        {}
+        {
+            %next "idle" %when (e.x <= e.xmin) { e.scoreRight () }
+            }
+        {}
+        }
+    state "left_paddle" {
+        {}
+        {
+            }
+        {}
+        }
+    state "right_paddle" {
+        {}
+        {
+            }
+        {}
+        }
+    state "ceiling" {
+        {}
+        {
+            }
+        {}
+        }
+    state "floor" {
+        {}
+        {
+            }
+        {}
+        }
+    
+    }machine "hit" {
+    state "idle" {
+        {}
+        {
+            %next "idle" %when (e.x <= e.xmin) { e.scoreRight () }
+            }
+        {}
+        }
+    state "left_paddle" {
+        {}
+        {
+            }
+        {}
+        }
+    state "right_paddle" {
+        {}
+        {
+            }
+        {}
+        }
+    state "ceiling" {
+        {}
+        {
+            }
+        {}
+        }
+    state "floor" {
+        {}
+        {
+            }
+        {}
+        }
+    
+    }machine "hit" {
+    state "idle" {
+        {}
+        {
+            %next "idle" %when (e.x <= e.xmin) { e.scoreRight () }
+            }
+        {}
+        }
+    state "left_paddle" {
+        {}
+        {
+            }
+        {}
+        }
+    state "right_paddle" {
+        {}
+        {
+            }
+        {}
+        }
+    state "ceiling" {
+        {}
+        {
+            }
+        {}
+        }
+    state "floor" {
+        {}
+        {
+            }
+        {}
+        }
+    
+    }machine "hit" {
+    state "idle" {
+        {}
+        {
+            %next "idle" %when (e.x <= e.xmin) { e.scoreRight () }
+            }
+        {}
+        }
+    state "left_paddle" {
+        {}
+        {
+            }
+        {}
+        }
+    state "right_paddle" {
+        {}
+        {
+            }
+        {}
+        }
+    state "ceiling" {
+        {}
+        {
+            }
+        {}
+        }
+    state "floor" {
+        {}
+        {
+            }
+        {}
+        }
+    
+    }machine "hit" {
+    state "idle" {
+        {}
+        {
+            %next "idle" %when (e.x <= e.xmin) { e.scoreRight () }
+            }
+        {}
+        }
+    state "left_paddle" {
+        {}
+        {
+            }
+        {}
+        }
+    state "right_paddle" {
+        {}
+        {
+            }
+        {}
+        }
+    state "ceiling" {
+        {}
+        {
+            }
+        {}
+        }
+    state "floor" {
+        {}
+        {
+            }
+        {}
+        }
+    
+    }machine "hit" {
+    state "idle" {
+        {}
+        {
+            %next "idle" %when (e.x <= e.xmin) { e.scoreRight () }
+            }
+        {}
+        }
+    state "left_paddle" {
+        {}
+        {
+            }
+        {}
+        }
+    state "right_paddle" {
+        {}
+        {
+            }
+        {}
+        }
+    state "ceiling" {
+        {}
+        {
+            }
+        {}
+        }
+    state "floor" {
+        {}
+        {
+            }
+        {}
+        }
+    
+    }machine "hit" {
+    state "idle" {
+        {}
+        {
+            %next "idle" %when (e.x <= e.xmin) { e.scoreRight () }
+            }
+        {}
+        }
+    state "left_paddle" {
+        {}
+        {
+            }
+        {}
+        }
+    state "right_paddle" {
+        {}
+        {
+            }
+        {}
+        }
+    state "ceiling" {
+        {}
+        {
+            }
+        {}
+        }
+    state "floor" {
+        {}
+        {
+            }
+        {}
+        }
+    
+    }machine "hit" {
+    state "idle" {
+        {}
+        {
+            %next "idle" %when (e.x <= e.xmin) { e.scoreRight () }
+            }
+        {}
+        }
+    state "left_paddle" {
+        {}
+        {
+            }
+        {}
+        }
+    state "right_paddle" {
+        {}
+        {
+            }
+        {}
+        }
+    state "ceiling" {
+        {}
+        {
+            }
+        {}
+        }
+    state "floor" {
+        {}
+        {
+            }
+        {}
+        }
+    
+    }machine "hit" {
     state "idle" {
         {}
         {
