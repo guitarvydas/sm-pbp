@@ -27,4 +27,13 @@ As it stands, `looper.py` is generated sa raw Python code meant to be copy/paste
 
 
 # Further Reading
-[Little Language Case Study - Generating Code for Simple State Machines](https://programmingsimplicity.substack.com/p/little-language-case-study-generating?r=1egdky)
+[Little Language Case Study - Generating Code for Simple State Machines https://programmingsimplicity.substack.com/p/little-language-case-study-generating?r=1egdky](https://programmingsimplicity.substack.com/p/little-language-case-study-generating?r=1egdky)
+
+# Appendix - repository
+[https://github.com/guitarvydas/sm-pbp](https://github.com/guitarvydas/sm-pbp)
+
+# Appendix - [WIP] Use-Case for PBP-Pong
+
+I'm using the state machine diagram transmogrifier in another project (pbp-pong). This is an early attempt at figuring out the logic for the collision detector (warning: this design is preliminary and might contain significant errors)
+
+![WIP ballhit state diagram for testing pbp-pong](ballhit.drawio.png)
