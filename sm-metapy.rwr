@@ -30,7 +30,7 @@
   stuff_rec [lb stuff* rb] = ‛«lb»«stuff»«rb»’
   stuff_nextStatement [n] = ‛«n»’
   stuff_other [c] = ‛«c»’
-  Next [_next name _when e transitionCode?] = ‛\nif «e»:⤷\nself.exit_⎨legalize ‛⟪statename⟫’⎬ ()«transitionCode»\nself.enter_⎨legalize ‛«name»’⎬ ()⤶’
+  Next [_next name _when e transitionCode?] = ‛\nif «e»:⤷\nself.exit_⎨legalize ‛⟪statename⟫’⎬ ()«transitionCode»\nself.enter_⎨legalize ‛«name»’⎬ ()\nreturn⤶’
   name_squoted [lq cs+ rq] = ‛«cs»’
   name_dquoted [lq cs+ rq] = ‛«cs»’
   expr [lb cs+ rb] = ‛«lb»«cs»«rb»’

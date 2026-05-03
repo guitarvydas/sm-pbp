@@ -11,10 +11,12 @@ class SM_looper:
             self.exit_idle ()
             e.reverse ()
             self.enter_wait_for_max_recrossing ()
+            return
         if (e.x < e.min):
             self.exit_idle ()
             e.reverse ()
             self.enter_wait_for_min_recrossing ()
+            return
     def exit_idle (self):
         e = self.env
         pass
@@ -28,6 +30,7 @@ class SM_looper:
         if (e.x < e.max):
             self.exit_wait_for_max_recrossing ()
             self.enter_idle ()
+            return
     def exit_wait_for_max_recrossing (self):
         e = self.env
         pass
@@ -41,6 +44,7 @@ class SM_looper:
         if (e.x > e.min):
             self.exit_wait_for_min_recrossing ()
             self.enter_idle ()
+            return
     def exit_wait_for_min_recrossing (self):
         e = self.env
         pass
