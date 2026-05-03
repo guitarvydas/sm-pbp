@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "youtube description.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "youtube description"
             }
           }
         ],
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "youtube description.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for README"
+              "title": "Backlinks for youtube description"
             }
           },
           {
@@ -128,12 +128,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "youtube description.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from README"
+              "title": "Outgoing links from youtube description"
             }
           },
           {
@@ -171,13 +171,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "youtube description.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of README"
+              "title": "Outline of youtube description"
             }
           }
         ]
@@ -200,19 +200,18 @@
   },
   "active": "940d56a9912238e4",
   "lastOpenFiles": [
+    "README.md",
     "testjig.drawio.json",
     "out.py",
     "out.sm",
     "out.mr.json",
-    "temp.nanodsl.27728.mjs",
-    "temp.nanodsl.4530.mjs",
-    "temp.nanodsl.895.mjs",
-    "temp.nanodsl.14099.mjs",
-    "temp.nanodsl.11373.mjs",
-    "temp.nanodsl.8647.mjs",
-    "temp.nanodsl.5922.mjs",
+    "temp.nanodsl.2482.mjs",
+    "temp.nanodsl.12960.mjs",
+    "temp.nanodsl.9326.mjs",
+    "temp.nanodsl.6600.mjs",
+    "temp.nanodsl.3874.mjs",
+    "temp.nanodsl.17078.mjs",
     "youtube description.md",
-    "README.md",
     "ballhit.drawio.png"
   ]
 }
