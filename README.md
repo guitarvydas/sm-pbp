@@ -17,7 +17,9 @@ As it stands, `looper.py` is generated sa raw Python code meant to be copy/paste
 # usage
 `./@make`
 
-(remember to run the installer once before running @make)
+# First-time usage
+`./INSTALL.bash`
+`./@make`
 
 # install
 `./INSTALL.bash`
