@@ -11,8 +11,8 @@
 transmog=smdpl
 
 # 1. rebuild the transmogrifier ("compiler") every time...
-das2json ${transmog}.drawio
-python ${transmog}.py "${CALLERPATH}/${TARGET}".drawio main ${transmog}.drawio.json | splitoutputs
+das2json "${transmog}.drawio"
+python ${transmog}.py "${CALLERPATH}/${TARGET}".drawio main "${transmog}.drawio.json" | splitoutputs
 checkfailure
 mv out.py "${CALLERPATH}/${TARGET}.py"
 
